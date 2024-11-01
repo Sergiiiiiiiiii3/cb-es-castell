@@ -1,0 +1,462 @@
+.titol {
+  font-size: 450%;
+  letter-spacing: 1px;
+}
+
+.titulo-seccion {
+  text-align: center;
+  font-size: 450%;
+  letter-spacing: 1px;
+}
+
+.titulo-Nos {
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  text-align: center;
+  font-size: 350%;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+/* Estilos Generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f1e41c;
+}
+
+/* Encabezado */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1e41c;
+  color: #000;
+  padding: 10px;
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  font-size: 250%;
+  text-align: center;
+}
+
+.logo {
+  margin: 0 15px 0 25px;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+/* Barra de navegación */
+.navbar {
+  background-color: #000;
+  padding: 10px 0;
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  letter-spacing: 1px;
+}
+
+.navbar-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-list li {
+  margin: 0 15px;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+/* Sección Sobre Nosaltres */
+.seccion-sobre-noltros {
+  position: relative;
+  font-family: 'Bebas Neue', Arial, sans-serif;
+}
+
+.imagen-con-texto {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Altura fija para el contenedor */
+  overflow: hidden; /* Oculta los lados de la imagen cuando se recorta */
+}
+
+.imagen-fondo {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+.texto-degradado {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 70px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+  color: white;
+  text-align: left;
+  font-family: Arial, sans-serif;
+}
+
+.texto-degradado p {
+  margin: 0;
+  text-align: left;
+}
+
+/* Sección Equipo */
+.seccion-equipo {
+  padding: 50px 20px;
+  font-family: 'Bebas Neue', Arial, sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.jugador {
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  overflow: hidden;
+  transition: transform 0.3s;
+  text-align: center;
+  padding: 10px;
+}
+
+.jugador img {
+  width: 100%;
+}
+
+.jugador h3 {
+  margin: 10px 0 5px;
+}
+
+.info {
+  font-size: 0.9rem;
+  margin: 5px 0;
+}
+
+.jugador:hover {
+  transform: scale(1.05);
+}
+
+ /* Responsividad */
+ @media (max-width: 768px) {
+  /* Diseño en pantallas medianas */
+  .calendari-grid {
+    grid-template-columns: 1fr; /* Cambiar a una sola columna */
+  }
+  .titulo-Nos{
+  font-size: 250%;
+  }
+  .header{
+  font-size: 200%;
+  line-height: 0.8;
+  }
+
+  aside {
+    margin-top: 20px; /* Asegura que aside esté debajo del calendario */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Diseño en pantallas pequeñas */
+  .grid-container, .grid-planter {
+    grid-template-columns: 1fr; /* Una sola columna para equipos y plantillas */
+  }
+  .titulo-Nos{
+    font-size: 250%;
+  }
+  .calendari-grid {
+    grid-template-columns: 1fr; /* Alinear en una columna */
+  }
+}
+
+/* Sección Planter */
+.seccion-planter {
+  padding: 50px 20px;
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  text-align: center;
+}
+
+.grid-planter {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.rectangulo {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+  border-radius: 8px;
+}
+
+.rectangulo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(50%);
+  transition: filter 0.3s ease-in-out;
+}
+
+.contenido-rectangulo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.rectangulo:hover .contenido-rectangulo {
+  opacity: 0;
+}
+
+.rectangulo:hover img {
+  filter: brightness(100%);
+}
+  /* Responsividad para sección PLANTER */
+  @media (max-width: 768px) {
+    .grid-planter {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .grid-planter {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+.texto-superior {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.rectangulo:hover .texto-superior {
+  opacity: 0;
+}
+
+.calendari-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}
+
+  /* Estilos para la Sección Calendari */
+  .seccion-calendari {
+    padding: 50px 20px;
+    background-color: #f1e41c;
+    font-family: Gobold, Arial, sans-serif;
+    flex: 1; /* Permite que el calendario use todo el espacio disponible */
+    
+  }
+  
+  
+  .calendari-container {
+    background-color: #f1e41c; /* Color de fondo para el calendario */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados opcionales */
+  }
+  
+  .calendari-content {
+    flex: 1; /* Permitir que esta parte use el espacio restante */
+    margin-right: 20px; /* Espacio entre el contenido y el aside */
+  }
+  .venta-entradas {
+    background-color: #f1e41c; /* Color de fondo opcional para el aside */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados opcionales */
+  }
+
+  aside {
+    background-color: #f4f4f4; /* Fondo para el aside */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para efecto de elevación */
+  }
+.partido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 75%; /* Tres cuartos del ancho de la pantalla */
+    background-color: #f4f4f4;
+    border: 2px solid #333;
+    padding: 5px;
+    border-radius: 0; /* Esquinas puntiagudas */
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+.partido:hover {
+    transform: scale(1.02); /* Efecto de agrandamiento al pasar el ratón */
+  }
+  
+.escudo-izq, .escudo-der {
+    width: 40px;
+    height: auto;
+  }
+  
+.info-partido {
+    text-align: center;
+    flex-grow: 1;
+  }
+  
+.info-partido h3 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+.info-partido p {
+    font-size: 1rem;
+    margin: 0;
+  }
+  
+#canvas1, #canvas2 {
+  display: block;
+  margin: 0 auto;
+  border: 2px solid #333;
+  width: 100%;
+}
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.P5 text {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  margin-top: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#proyecto1 {
+  margin-bottom: 5rem;
+}
+
+#Intrinsic-Web-Design {
+  margin-top: 5rem;
+}
+
+.rotated-text {
+  display: inline-block;
+  font-size: 10px;
+  color: #333;
+  transform: rotate(-5deg);
+  transform-origin: left bottom;
+}
+
+.rotated-text p {
+  margin: 10px 0;
+}
+
+.venta-entradas h2 {
+  font-size: 250%;
+  color: #000;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.venta-entradas p, .venta-entradas li {
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.btn-entrada {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.btn-entrada:hover {
+  background-color: #333;
+}
+
+#net-art {
+  text-align: center;
+  padding: 20px;
+}
+
+#canvas-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border: 2px solid #333;
+}
+
+#basketballCanvas {
+  width: 100%;
+  height: 100%;
+}
+/* Configuración Responsiva */
+@media (max-width: 768px) {
+  /* Diseño en pantallas medianas */
+  .calendari-grid {
+    grid-template-columns: 1fr; /* Cambiar a una sola columna */
+  }
+
+  aside {
+    margin-top: 20px; /* Asegura que aside esté debajo del calendario */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Diseño en pantallas pequeñas */
+  .grid-container, .grid-planter {
+    grid-template-columns: 1fr; /* Una sola columna para equipos y plantillas */
+  }
+
+  .calendari-grid {
+    grid-template-columns: 1fr; /* Alinear en una columna */
+  }
+}
